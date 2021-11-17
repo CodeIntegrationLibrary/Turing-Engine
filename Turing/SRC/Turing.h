@@ -2,10 +2,11 @@
 
 #include<stdio.h>
 
-// For use by Turing Applications ( 用于图灵引擎程序 )
+/*  For use by Turing Applications(用于图灵引擎程序) */
 #include"Turing/Core.h"
 #include"Turing/Application.h"
+#include"Turing/Log.h"
 
-// --- Entry Point (入口点)------
+/* --- Entry Point(入口点)------ */ 
 #include"Turing/EntryPoint.h"
-// ------------------------------
+/* ----------------------------- */

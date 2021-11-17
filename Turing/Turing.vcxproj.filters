@@ -27,9 +27,15 @@
     <ClInclude Include="SRC\Turing\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SRC\Turing\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\Turing\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
