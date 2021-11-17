@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SRC\Application.cpp">
+    <ClCompile Include="SRC\SandBoxApp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

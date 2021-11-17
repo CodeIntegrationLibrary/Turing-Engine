@@ -57,7 +57,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TR_PLATFORM_WINDOWS;TR_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -82,10 +82,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="SRC\Test.h" />
+    <ClInclude Include="SRC\Turing.h" />
+    <ClInclude Include="SRC\Turing\Application.h" />
+    <ClInclude Include="SRC\Turing\Core.h" />
+    <ClInclude Include="SRC\Turing\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SRC\Test.cpp" />
+    <ClCompile Include="SRC\Turing\Application.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

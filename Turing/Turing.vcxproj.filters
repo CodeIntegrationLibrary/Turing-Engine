@@ -15,12 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SRC\Test.h">
+    <ClInclude Include="SRC\Turing\Core.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SRC\Test.cpp">
+    <ClCompile Include="SRC\Turing\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
