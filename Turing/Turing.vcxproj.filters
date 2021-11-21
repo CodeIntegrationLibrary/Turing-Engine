@@ -19,6 +19,10 @@
     <ClInclude Include="SRC\Turing\Log.h">
       <Filter>Turing</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\Events\ApplicationEvent.h" />
+    <ClInclude Include="SRC\Turing\Events\Event.h" />
+    <ClInclude Include="SRC\Turing\Events\KeyEvent.h" />
+    <ClInclude Include="SRC\Turing\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SRC\Turing\Application.cpp">

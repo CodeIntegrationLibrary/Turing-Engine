@@ -23,13 +23,14 @@ project "Turing"
 	}
 
 	includedirs {
+		"%{prj.name}/SRC",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		defines {
 			"TR_PLATFORM_WINDOWS",
@@ -59,7 +60,7 @@ project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
 	files {
 		"%{prj.name}/SRC/**.h",
@@ -78,7 +79,7 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++20"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 
 		defines {
 			"TR_PLATFORM_WINDOWS"
