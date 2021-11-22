@@ -2,8 +2,6 @@
 
 #include"Event.h"
 
-#include<sstream>
-
 namespace Turing {
 	class TURING_API MouseMovedEvent :public Event {
 	public:

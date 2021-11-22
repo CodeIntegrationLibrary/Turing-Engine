@@ -1,9 +1,7 @@
 #pragma once
 
+#include"trpch.h"
 #include"Turing/Core.h"
-
-#include<string>
-#include<functional>
 
 namespace Turing {
 

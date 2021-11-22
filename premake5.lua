@@ -17,6 +17,9 @@ project "Turing"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "trpch.h"
+	pchsource "%{prj.name}/SRC/trpch.cpp"
+
 	files {
 		"%{prj.name}/SRC/**.h",
 		"%{prj.name}/SRC/**.cpp"

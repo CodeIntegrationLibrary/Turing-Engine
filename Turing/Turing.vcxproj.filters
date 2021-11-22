@@ -4,6 +4,9 @@
     <Filter Include="Turing">
       <UniqueIdentifier>{FEDC55D4-EA7E-80AA-D339-94FEBF7A07FB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Turing\Events">
+      <UniqueIdentifier>{223F6DCA-8EFF-E800-573A-327EC3B92DDD}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SRC\Turing.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="SRC\Turing\EntryPoint.h">
       <Filter>Turing</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\Events\ApplicationEvent.h">
+      <Filter>Turing\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Events\Event.h">
+      <Filter>Turing\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Events\KeyEvent.h">
+      <Filter>Turing\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Events\MouseEvent.h">
+      <Filter>Turing\Events</Filter>
+    </ClInclude>
     <ClInclude Include="SRC\Turing\Log.h">
       <Filter>Turing</Filter>
     </ClInclude>
-    <ClInclude Include="SRC\Turing\Events\ApplicationEvent.h" />
-    <ClInclude Include="SRC\Turing\Events\Event.h" />
-    <ClInclude Include="SRC\Turing\Events\KeyEvent.h" />
-    <ClInclude Include="SRC\Turing\Events\MouseEvent.h" />
+    <ClInclude Include="SRC\trpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SRC\Turing\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="SRC\Turing\Log.cpp">
       <Filter>Turing</Filter>
     </ClCompile>
+    <ClCompile Include="SRC\trpch.cpp" />
   </ItemGroup>
 </Project>
