@@ -10,6 +10,12 @@ workspace "Turing"
 -- 多系统支持
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory) | 包含相对于根文件夹(解决方案目录)的目录
+IncludeDir = {}
+IncludeDir["GLFW"] = "Turing/vendor/GLFW/include"
+
+include "Turing/vendor/GLFW"
+
 project "Turing"
 	location "Turing"
 	kind "SharedLib"
@@ -27,7 +33,13 @@ project "Turing"
 
 	includedirs {
 		"%{prj.name}/SRC",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

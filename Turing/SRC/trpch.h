@@ -12,6 +12,8 @@
 #include<unordered_map>
 #include<unordered_set>
 
-#ifdef TR_RLATFORM_WINDOWS
+#include"Turing/Log.h"
+
+#ifdef TR_PLATFORM_WINDOWS
 	#include<Windows.h>
 #endif

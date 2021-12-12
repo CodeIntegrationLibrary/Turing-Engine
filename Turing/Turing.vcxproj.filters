@@ -7,6 +7,12 @@
     <Filter Include="Turing\Events">
       <UniqueIdentifier>{223F6DCA-8EFF-E800-573A-327EC3B92DDD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Turing\Platform">
+      <UniqueIdentifier>{1297D736-7E22-45FB-8733-C8EFF33DA1FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Turing\Platform\Windows">
+      <UniqueIdentifier>{4C334C3B-B86A-94D2-C174-F8F52D2BBBCB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SRC\Turing.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="SRC\Turing\Log.h">
       <Filter>Turing</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\Platform\Windows\WindowsWindow.h">
+      <Filter>Turing\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Window.h">
+      <Filter>Turing</Filter>
+    </ClInclude>
     <ClInclude Include="SRC\trpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="SRC\Turing\Log.cpp">
       <Filter>Turing</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\Turing\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Turing\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="SRC\trpch.cpp" />
   </ItemGroup>

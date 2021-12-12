@@ -2,6 +2,7 @@
 
 #include"Core.h"
 #include"Events/Event.h"
+#include"Window.h"
 
 namespace Turing {
 
@@ -12,9 +13,12 @@ namespace Turing {
 		virtual ~Application();
 
 		void Run();	// 空运行
+
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	/* To be defined in CLIENT (在 CLIENT 中定义) */
 	Application* CreateApplication();
-
 }

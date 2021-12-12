@@ -1,3 +1,6 @@
 [submodule "Turing/vendor/spdlog"]
 	path = Turing/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Turing/vendor/GLFW"]
+	path = Turing/vendor/GLFW
+	url = https://github.com/theCherno/glfw
