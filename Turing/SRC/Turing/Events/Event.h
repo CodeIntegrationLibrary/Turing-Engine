@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include"trpch.h"
 #include"Turing/Core.h"
@@ -6,10 +6,10 @@
 namespace Turing {
 
 	/*
-	*	Events in Turing are Currently blocking, meaning when an event occurs it | Í¼ÁéÖĞµÄÊÂ¼şÊÇµ±Ç°×èÈûµÄ£¬ÒâË¼ÊÇµ±ÊÂ¼ş·¢ÉúÊ±
-	*	Immediately gets dispatched and must be dealt with right then an there   | Á¢¼´µ÷¶È£¬±ØĞëÁ¢¼´´¦Àí
-	*	For the Futue, a better strategy might be to buffer events in an event   | Îª Futue,¸üºÃµÄ²ßÂÔ¿ÉÄÜÊÇÔÚÊÂ¼şÖĞ»º³åÊÂ¼ş
-	*	bus and process them during the "event" part of the update stage.        | ÔÚ¸üĞÂ½×¶ÎµÄ¡°ÊÂ¼ş¡±²¿·Ö£¬×ÜÏß²¢´¦ÀíËüÃÇ.
+	*	Events in Turing are Currently blocking, meaning when an event occurs it | å›¾çµä¸­çš„äº‹ä»¶æ˜¯å½“å‰é˜»å¡çš„ï¼Œæ„æ€æ˜¯å½“äº‹ä»¶å‘ç”Ÿæ—¶
+	*	Immediately gets dispatched and must be dealt with right then an there   | ç«‹å³è°ƒåº¦ï¼Œå¿…é¡»ç«‹å³å¤„ç†
+	*	For the Futue, a better strategy might be to buffer events in an event   | ä¸º Futue,æ›´å¥½çš„ç­–ç•¥å¯èƒ½æ˜¯åœ¨äº‹ä»¶ä¸­ç¼“å†²äº‹ä»¶
+	*	bus and process them during the "event" part of the update stage.        | åœ¨æ›´æ–°é˜¶æ®µçš„â€œäº‹ä»¶â€éƒ¨åˆ†ï¼Œæ€»çº¿å¹¶å¤„ç†å®ƒä»¬.
 	*/
 
 	enum class EventType {
@@ -34,6 +34,7 @@ namespace Turing {
 								virtual const char* GetName() const override { return #type; }
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override{ return category;}
+
 	class TURING_API Event
 	{
 		friend class EventDispatcher;
@@ -43,8 +44,7 @@ namespace Turing {
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
-		inline bool IsInCategory(EventCategory category)
-		{
+		inline bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
 	protected:
@@ -62,10 +62,8 @@ namespace Turing {
 		}
 
 		template<typename T>
-		bool Dispatch(EventFn<T> func)
-		{
-			if (m_Event.GetEventType() == T::GetStaticType())
-			{
+		bool Dispatch(EventFn<T> func) {
+			if (m_Event.GetEventType() == T::GetStaticType()) {
 				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
@@ -75,8 +73,7 @@ namespace Turing {
 		Event& m_Event;
 	};
 
-	inline std::ostream& operator<<(std::ostream& os, const Event& e)
-	{
+	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
 		return os << e.ToString();
 	}
 }

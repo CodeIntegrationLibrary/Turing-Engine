@@ -1,4 +1,4 @@
-#include "trpch.h"
+﻿#include "trpch.h"
 #include "WindowsWindow.h"
 
 namespace Turing {
@@ -26,9 +26,9 @@ namespace Turing {
 
 		if (!s_GLFWInitialized) {
 
-			/* TODO: glfwTerminate on system shutdown | ϵͳ�ر�ʱ��ֹ */
+			/* TODO: glfwTerminate on system shutdown | 系统关闭时终止 */
 			int success = glfwInit();
-			TR_CORE_ASSERT(success, "Could not intialize GLFW! | �޷���ʼ�� GLFW !");
+			TR_CORE_ASSERT(success, "Could not intialize GLFW! | 无法初始化 GLFW !");
 
 			s_GLFWInitialized = true;
 		}

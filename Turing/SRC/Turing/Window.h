@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include"trpch.h"
 
@@ -18,7 +18,7 @@ namespace Turing {
 			: Title(title), Width(width), Height(height) {}
 	};
 
-	/* Interface representing a desktop system based Window | ½Ó¿Ú±íÊ¾»ùÓÚ´°¿ÚµÄ×ÀÃæÏµÍ³ */
+	/* Interface representing a desktop system based Window | æ¥å£è¡¨ç¤ºåŸºäºçª—å£çš„æ¡Œé¢ç³»ç»Ÿ */
 	class TURING_API Window {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
@@ -30,7 +30,7 @@ namespace Turing {
 		virtual unsigned int GetWidth() const = 0;
 		virtual unsigned int GetHeight() const = 0;
 
-		/* Window attributes | ´°¿ÚµÄÊôĞÔ */
+		/* Window attributes | çª—å£çš„å±æ€§ */
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;

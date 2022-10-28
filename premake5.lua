@@ -1,4 +1,4 @@
-workspace "Turing"
+ï»¿workspace "Turing"
 	architecture "x64"
 
 	configurations {
@@ -7,10 +7,10 @@ workspace "Turing"
 		"Dist"
 	}
 
--- ¶àÏµÍ³Ö§³Ö
+-- å¤šç³»ç»Ÿæ”¯æŒ
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Include directories relative to root folder (solution directory) | °üº¬Ïà¶ÔÓÚ¸ùÎÄ¼ş¼Ğ(½â¾ö·½°¸Ä¿Â¼)µÄÄ¿Â¼
+-- Include directories relative to root folder (solution directory) | åŒ…å«ç›¸å¯¹äºæ ¹æ–‡ä»¶å¤¹(è§£å†³æ–¹æ¡ˆç›®å½•)çš„ç›®å½•
 IncludeDir = {}
 IncludeDir["GLFW"] = "Turing/vendor/GLFW/include"
 
@@ -20,6 +20,7 @@ project "Turing"
 	location "Turing"
 	kind "SharedLib"
 	language "C++"
+	characterset "Unicode"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -46,6 +47,7 @@ project "Turing"
 		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
+		buildoptions "/MDd"
 
 		defines {
 			"TR_PLATFORM_WINDOWS",
@@ -66,7 +68,7 @@ project "Turing"
 		defines "TR_DIST"
 		optimize "On"
 
-	-- Ä¿Ç°ÓÃ²»µ½¶àÏß³ÌÖ®ºó¿ÉÄÜ»áÓÃµ½
+	-- ç›®å‰ç”¨ä¸åˆ°å¤šçº¿ç¨‹ä¹‹åå¯èƒ½ä¼šç”¨åˆ°
 	--filters {"system:windows","configurations:Release"}
 		--buildoptions "/MT"
 
@@ -74,6 +76,7 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	characterset "Unicode"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	

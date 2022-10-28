@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifdef TR_PLATFORM_WINDOWS
 	#ifdef TR_BUILD_DLL

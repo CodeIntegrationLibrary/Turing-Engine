@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include"Core.h"
 #include"spdlog/spdlog.h"
@@ -9,10 +9,10 @@ namespace Turing {
 	class TURING_API Log {
 	public:
 
-		/* Initialization function(³õÊ¼»¯º¯Êı) */
+		/* Initialization function(åˆå§‹åŒ–å‡½æ•°) */
 		static void Init();
 
-		/* ÄÚÁª¾²Ì¬¹²ÏíÖ¸Õë */
+		/* å†…è”é™æ€å…±äº«æŒ‡é’ˆ */
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() {
 			return s_CoreLogger;
 		}
@@ -26,16 +26,16 @@ namespace Turing {
 	};
 }
 
-/* Core log macros (ºËĞÄÈÕÖ¾ºê) */
+/* Core log macros (æ ¸å¿ƒæ—¥å¿—å®) */
 #define TR_CORE_TRACE(...)	::Turing::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define TR_CORE_INFO(...)	::Turing::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define TR_CORE_WARN(...)	::Turing::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define TR_CORE_ERROR(...)	::Turing::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define TR_CORE_FATAL(...)	::Turing::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-/* Client log macros (¿Í»§¶ËÈÕÖ¾ºê) */
-#define TR_TRACE(...)	::Turing::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define TR_INFO(...)	::Turing::Log::GetClientLogger()->info(__VA_ARGS__)
-#define TR_WARN(...)	::Turing::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define TR_ERROR(...)	::Turing::Log::GetClientLogger()->error(__VA_ARGS__)
-#define TR_FATAL(...)	::Turing::Log::GetClientLogger()->fatal(__VA_ARGS__)
+/* Client log macros (å®¢æˆ·ç«¯æ—¥å¿—å®) */
+#define TR_TRACE(...)		::Turing::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define TR_INFO(...)		::Turing::Log::GetClientLogger()->info(__VA_ARGS__)
+#define TR_WARN(...)		::Turing::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define TR_ERROR(...)		::Turing::Log::GetClientLogger()->error(__VA_ARGS__)
+#define TR_FATAL(...)		::Turing::Log::GetClientLogger()->fatal(__VA_ARGS__)

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include"Core.h"
 #include"Events/Event.h"
@@ -6,19 +6,19 @@
 
 namespace Turing {
 
-	/* TURING_API ÒıÓÃ×Ô Core.h ÎÄ¼ş£¬Ìæ»»ÁË _declspec(dllexport) */
+	/* TURING_API å¼•ç”¨è‡ª Core.h æ–‡ä»¶ï¼Œæ›¿æ¢äº† _declspec(dllexport) */
 	class TURING_API Application {
 	public:
 		Application();
 		virtual ~Application();
 
-		void Run();	// ¿ÕÔËĞĞ
+		void Run();	// ç©ºè¿è¡Œ
 
 	private:
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};
 
-	/* To be defined in CLIENT (ÔÚ CLIENT ÖĞ¶¨Òå) */
+	/* To be defined in CLIENT (åœ¨ CLIENT ä¸­å®šä¹‰) */
 	Application* CreateApplication();
 }

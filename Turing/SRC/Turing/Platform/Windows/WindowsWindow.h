@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Turing/Window.h"
 
@@ -16,7 +16,7 @@ namespace Turing {
 		inline unsigned int GetWidth() const override { return m_Data.Width; }
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
-		/* Window attributes | ´°¿ÚµÄÊôĞÔ */
+		/* Window attributes | çª—å£çš„å±æ€§ */
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;

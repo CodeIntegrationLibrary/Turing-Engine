@@ -1,12 +1,12 @@
-#pragma once
+ï»¿#pragma once
 
 #include<stdio.h>
 
-/*  For use by Turing Applications(ÓÃÓÚÍ¼ÁéÒıÇæ³ÌĞò) */
+/*  For use by Turing Applications(ç”¨äºå›¾çµå¼•æ“ç¨‹åº) */
 #include"Turing/Core.h"
 #include"Turing/Application.h"
 #include"Turing/Log.h"
 
-/* --- Entry Point(Èë¿Úµã)------ */ 
+/* --- Entry Point(å…¥å£ç‚¹)------ */ 
 #include"Turing/EntryPoint.h"
 /* ----------------------------- */

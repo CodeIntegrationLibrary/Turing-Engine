@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 
 #ifdef TR_PLATFORM_WINDOWS
 extern Turing::Application* Turing::CreateApplication();
 int main(int argc, char** argv) {
 	Turing::Log::Init();
-	TR_CORE_WARN("Initialized Log  | ³õÊ¼»¯ÈÕÖ¾ £¡");
+	TR_CORE_WARN("Initialized Log  | åˆå§‹åŒ–æ—¥å¿— ï¼");
 	int a = 5;
 	TR_INFO("Hello Turing Engine | Var{0}", a);
 
