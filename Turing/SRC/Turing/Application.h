@@ -2,6 +2,8 @@
 
 #include"Core.h"
 #include"Events/Event.h"
+#include"Turing/Events/ApplicationEvent.h"
+
 #include"Window.h"
 
 namespace Turing {
@@ -14,7 +16,10 @@ namespace Turing {
 
 		void Run();	// 空运行
 
+		void OnEvent(Event & e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};
