@@ -1,10 +1,11 @@
 ﻿#pragma once
 
 #include"Core.h"
-#include"Events/Event.h"
-#include"Turing/Events/ApplicationEvent.h"
 
-#include"Window.h"
+#include "Window.h"
+#include "Turing/LayerStack.h"
+#include "Turing/Events/Event.h"
+#include "Turing/Events/ApplicationEvent.h"
 
 namespace Turing {
 
@@ -17,11 +18,15 @@ namespace Turing {
 		void Run();	// 空运行
 
 		void OnEvent(Event & e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	/* To be defined in CLIENT (在 CLIENT 中定义) */

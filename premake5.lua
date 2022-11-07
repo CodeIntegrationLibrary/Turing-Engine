@@ -47,7 +47,6 @@ project "Turing"
 		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
-		buildoptions "/MDd"
 
 		defines {
 			"TR_PLATFORM_WINDOWS",
@@ -60,12 +59,15 @@ project "Turing"
 
 	filter "configurations:Debug"
 		defines "TR_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	filter "configurations:Release"
 		defines "TR_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "TR_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	-- 目前用不到多线程之后可能会用到
@@ -105,10 +107,13 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "TR_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	filter "configurations:Release"
 		defines "TR_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 	filter "configurations:Dist"
 		defines "TR_DIST"
+		buildoptions "/MD"
 		optimize "On"

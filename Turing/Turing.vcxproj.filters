@@ -37,6 +37,12 @@
     <ClInclude Include="SRC\Turing\Events\MouseEvent.h">
       <Filter>Turing\Events</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\Layer.h">
+      <Filter>Turing</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\LayerStack.h">
+      <Filter>Turing</Filter>
+    </ClInclude>
     <ClInclude Include="SRC\Turing\Log.h">
       <Filter>Turing</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SRC\Turing\Application.cpp">
+      <Filter>Turing</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\Turing\Layer.cpp">
+      <Filter>Turing</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\Turing\LayerStack.cpp">
       <Filter>Turing</Filter>
     </ClCompile>
     <ClCompile Include="SRC\Turing\Log.cpp">
