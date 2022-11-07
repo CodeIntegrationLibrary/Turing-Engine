@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory) | 包含相对于根文件夹(解决方案目录)的目录
 IncludeDir = {}
 IncludeDir["GLFW"] = "Turing/vendor/GLFW/include"
+IncludeDir["Glad"] = "Turing/vendor/Glad/Include"
 
 include "Turing/vendor/GLFW"
+include "Turing/vendor/Glad"
 
 project "Turing"
 	location "Turing"
@@ -35,11 +37,13 @@ project "Turing"
 	includedirs {
 		"%{prj.name}/SRC",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links {
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -50,7 +54,8 @@ project "Turing"
 
 		defines {
 			"TR_PLATFORM_WINDOWS",
-			"TR_BUILD_DLL"
+			"TR_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands {
