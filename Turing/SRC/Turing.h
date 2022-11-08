@@ -7,6 +7,8 @@
 #include"Turing/Layer.h"
 #include"Turing/Log.h"
 
+#include"Turing/ImGui/ImGuiLayer.h"
+
 /* --- Entry Point(入口点)------ */ 
 #include"Turing/EntryPoint.h"
 /* ----------------------------- */

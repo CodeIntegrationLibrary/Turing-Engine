@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>trpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TR_PLATFORM_WINDOWS;TR_BUILD_DLL;GLFW_INCLUDE_NONE;TR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -104,7 +104,7 @@
       <PrecompiledHeaderFile>trpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TR_PLATFORM_WINDOWS;TR_BUILD_DLL;GLFW_INCLUDE_NONE;TR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -132,7 +132,7 @@
       <PrecompiledHeaderFile>trpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TR_PLATFORM_WINDOWS;TR_BUILD_DLL;GLFW_INCLUDE_NONE;TR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>SRC;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -163,18 +163,22 @@
     <ClInclude Include="SRC\Turing\Events\Event.h" />
     <ClInclude Include="SRC\Turing\Events\KeyEvent.h" />
     <ClInclude Include="SRC\Turing\Events\MouseEvent.h" />
+    <ClInclude Include="SRC\Turing\ImGui\ImGuiLayer.h" />
     <ClInclude Include="SRC\Turing\Layer.h" />
     <ClInclude Include="SRC\Turing\LayerStack.h" />
     <ClInclude Include="SRC\Turing\Log.h" />
+    <ClInclude Include="SRC\Turing\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="SRC\Turing\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="SRC\Turing\Window.h" />
     <ClInclude Include="SRC\trpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SRC\Turing\Application.cpp" />
+    <ClCompile Include="SRC\Turing\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="SRC\Turing\Layer.cpp" />
     <ClCompile Include="SRC\Turing\LayerStack.cpp" />
     <ClCompile Include="SRC\Turing\Log.cpp" />
+    <ClCompile Include="SRC\Turing\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="SRC\Turing\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="SRC\trpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -186,6 +190,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -4,3 +4,6 @@
 [submodule "Turing/vendor/GLFW"]
 	path = Turing/vendor/GLFW
 	url = https://github.com/theCherno/glfw
+[submodule "Turing/vendor/imgui"]
+	path = Turing/vendor/imgui
+	url = https://github.com/TheCherno/imgui

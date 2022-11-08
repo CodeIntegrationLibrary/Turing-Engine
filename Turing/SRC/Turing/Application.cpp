@@ -7,7 +7,12 @@
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+Turing::Application* Turing::Application::s_Instance = nullptr;
+
 Turing::Application::Application() {
+	TR_CORE_ASSERT(!s_Instance, "Application already exists!");
+	s_Instance = this;
+
 	m_Window = std::unique_ptr<Window>(Window::Create());
 	m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
@@ -21,10 +26,12 @@ Turing::Application::~Application() {
 
 void Turing::Application::PushLayer(Layer* layer) {
 	m_LayerStack.PushLayer(layer);
+	layer->OnAttach();
 }
 
 void Turing::Application::PushOverlay(Layer* layer) {
 	m_LayerStack.PushOverlay(layer);
+	layer->OnAttach();
 }
 
 void Turing::Application::OnEvent(Event& e) {

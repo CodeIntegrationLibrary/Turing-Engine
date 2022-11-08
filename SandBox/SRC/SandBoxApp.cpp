@@ -20,6 +20,7 @@ class Sandbox : public Turing::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Turing::ImGuiLayer());
 	}
 
 	~Sandbox() {

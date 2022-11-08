@@ -7,8 +7,14 @@
     <Filter Include="Turing\Events">
       <UniqueIdentifier>{223F6DCA-8EFF-E800-573A-327EC3B92DDD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Turing\ImGui">
+      <UniqueIdentifier>{A8989BDF-94FB-2A84-3D81-633A29C3F606}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Turing\Platform">
       <UniqueIdentifier>{1297D736-7E22-45FB-8733-C8EFF33DA1FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Turing\Platform\OpenGL">
+      <UniqueIdentifier>{06588592-F251-AEE4-DBBE-44F5C7571451}</UniqueIdentifier>
     </Filter>
     <Filter Include="Turing\Platform\Windows">
       <UniqueIdentifier>{4C334C3B-B86A-94D2-C174-F8F52D2BBBCB}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="SRC\Turing\Events\MouseEvent.h">
       <Filter>Turing\Events</Filter>
     </ClInclude>
+    <ClInclude Include="SRC\Turing\ImGui\ImGuiLayer.h">
+      <Filter>Turing\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="SRC\Turing\Layer.h">
       <Filter>Turing</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="SRC\Turing\Log.h">
       <Filter>Turing</Filter>
+    </ClInclude>
+    <ClInclude Include="SRC\Turing\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Turing\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="SRC\Turing\Platform\Windows\WindowsWindow.h">
       <Filter>Turing\Platform\Windows</Filter>
@@ -58,6 +70,9 @@
     <ClCompile Include="SRC\Turing\Application.cpp">
       <Filter>Turing</Filter>
     </ClCompile>
+    <ClCompile Include="SRC\Turing\ImGui\ImGuiLayer.cpp">
+      <Filter>Turing\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="SRC\Turing\Layer.cpp">
       <Filter>Turing</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="SRC\Turing\Log.cpp">
       <Filter>Turing</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\Turing\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Turing\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="SRC\Turing\Platform\Windows\WindowsWindow.cpp">
       <Filter>Turing\Platform\Windows</Filter>

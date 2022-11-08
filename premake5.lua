@@ -13,10 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory) | 包含相对于根文件夹(解决方案目录)的目录
 IncludeDir = {}
 IncludeDir["GLFW"] = "Turing/vendor/GLFW/include"
-IncludeDir["Glad"] = "Turing/vendor/Glad/Include"
+IncludeDir["Glad"] = "Turing/vendor/Glad/include"
+IncludeDir["ImGui"] = "Turing/vendor/imgui/"
 
 include "Turing/vendor/GLFW"
 include "Turing/vendor/Glad"
+include "Turing/vendor/imgui"
 
 project "Turing"
 	location "Turing"
@@ -38,12 +40,14 @@ project "Turing"
 		"%{prj.name}/SRC",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links {
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
