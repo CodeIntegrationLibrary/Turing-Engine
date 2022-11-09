@@ -20,6 +20,8 @@ include "Turing/vendor/GLFW"
 include "Turing/vendor/Glad"
 include "Turing/vendor/imgui"
 
+startproject "Sandbox"
+
 project "Turing"
 	location "Turing"
 	kind "SharedLib"
